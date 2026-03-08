@@ -4,11 +4,13 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  repository_dispatch:
+    types: [cv-updated]
   schedule:
     - cron: "0 0 * * *"   # ogni notte a mezzanotte UTC
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -32,7 +34,14 @@ jobs:
         run: |
           git clone --depth=1 https://StefanoGiacomelli:${CV_TOKEN}@github.com/StefanoGiacomelli/Academic_CV.git /tmp/Academic_CV
           cp /tmp/Academic_CV/publications.bib data/publications.bib
-          cp /tmp/Academic_CV/Academic_CV.pdf assets/Academic_CV.pdf
+          cp /tmp/Academic_CV/Academic_CV.pdf data/Academic_CV.pdf
+
+      - name: Commit updated CV files
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data/publications.bib data/Academic_CV.pdf
+          git diff --staged --quiet || (git commit -m "chore: update CV files from Academic_CV [skip ci]" && git push)
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
