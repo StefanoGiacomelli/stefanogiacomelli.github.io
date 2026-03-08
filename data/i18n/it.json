@@ -11,7 +11,7 @@
     "name": "Stefano Giacomelli",
     "roles": [
       "Dottorando di Ricerca",
-      "Audio ML Engineer",
+      "Sviluppatore Audio ML/DL",
       "Musicista Elettroacustico",
       "Ingegnere del Suono"
     ],
@@ -19,18 +19,20 @@
   },
   "about": {
     "title": "Chi Sono",
-    "bio": "Sono un Dottorando di Ricerca presso l'Università dell'Aquila (Italia), e lavoro all'intersezione tra Elaborazione del Segnale Audio, Deep Learning e Internet of Sounds. La mia ricerca si concentra su architetture neurali efficienti per la classificazione audio in tempo reale e il monitoraggio sonoro ambientale nelle smart city.",
-    "bio2": "Oltre alla ricerca, sono un musicista elettroacustico e ingegnere del suono con una formazione in tecnologia musicale presso il Conservatorio A. Casella. Unisco la mia competenza tecnica alla pratica artistica per esplorare il potenziale creativo dell'audio computazionale.",
+    "bio": "Stefano Giacomelli (Graduate Student Member, IEEE) è nato a Rieti nel 1992. Ha conseguito il Diploma in Chitarra Elettrica presso il Saint Louis College of Music di Roma nel 2018, la Laurea Triennale (cum laude) in Composizione di Musica Elettroacustica nel 2020 e la Laurea Magistrale (cum laude con menzione di merito) in Direzione del Suono e Tecnologie nel 2023, entrambe presso il Conservatorio di Musica \"A. Casella\" di L'Aquila. Dal 2023 è iscritto al Dottorato di Ricerca in Tecnologie dell'Informazione e della Comunicazione presso il Dipartimento di Ingegneria e Scienze dell'Informazione e Matematica (DISIM) dell'Università degli Studi dell'Aquila. I suoi interessi di ricerca comprendono l'Elaborazione Digitale del Segnale (DSP), il Music Information Retrieval (MIR) e la Computational Auditory Scene Analysis (CASA), con focus sul signal embedding basato su deep learning e sull'ottimizzazione di reti neurali, ambiti per i quali ha co-firmato diversi contributi scientifici.",
+    "bio2": "Collabora attivamente a progetti di ricerca nazionali ed europei interdisciplinari, che spaziano tra domini scientifici e artistici — tra cui le realtà estese musicali (PRIN - Musical Metaverse 2022) e le metodologie di ricerca artistica e musicologica (EAR - Enacting Artistic Research WP3). È inoltre compositore, regista del suono, esecutore e sviluppatore software per produzioni di musica contemporanea acustica ed elettroacustica. S. Giacomelli è destinatario di diversi riconoscimenti, tra cui premi nazionali e menzioni di merito al Premio Nazionale delle Arti (MUR).",
     "interests_title": "Interessi di Ricerca",
     "interests": [
+      "Deep Learning",
       "Reti Neurali per l'Audio",
+      "Computational Auditory Scene Analysis",
+      "Classificazione di Scenari Acustici",
       "Sound Event Detection",
-      "Edge AI & Compressione Modelli",
       "Internet of Sounds",
       "Music Information Retrieval",
       "Psicoacustica",
       "Audio Spaziale",
-      "Acustica delle Smart City"
+      "Elaborazione Digitale del Segnale"
     ],
     "affiliations_title": "Affiliazioni",
     "affiliations": [
@@ -59,13 +61,13 @@
   },
   "publications": {
     "title": "Pubblicazioni",
-    "subtitle": "Generate automaticamente da BibTeX — le più recenti prima",
     "filter_all": "Tutte",
     "filter_conference": "Conferenza",
     "filter_journal": "Rivista",
     "filter_preprint": "Preprint",
     "filter_dataset": "Dataset",
     "filter_poster": "Poster",
+    "view_all": "Tutte le pubblicazioni",
     "types": {
       "inproceedings": "Conferenza",
       "article": "Rivista",
@@ -103,12 +105,13 @@
   },
   "contact": {
     "title": "Contattami",
-    "email_label": "Email",
+    "email_institutional_label": "Istituzionale",
+    "email_personal_label": "Personale",
     "location": "Rieti, Lazio, Italia",
     "connect": "Restiamo in contatto"
   },
   "footer": {
-    "copyright": "© 2025 Stefano Giacomelli. Tutti i diritti riservati.",
+    "copyright": "© 2026 Stefano Giacomelli. Tutti i diritti riservati.",
     "built_with": "Costruito con ♥ e vanilla JS"
   }
 }

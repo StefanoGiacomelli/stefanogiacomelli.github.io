@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Stefano Giacomelli</title>
+  <meta name="description" content="Full list of scientific publications by Stefano Giacomelli — journals, conferences, preprints and datasets in Audio ML/DL and Music Information Retrieval." />
+  <meta name="author" content="Stefano Giacomelli" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            surface: { DEFAULT: '#1a1a2e', dark: '#0a0a0f', light: '#2a2a4a' },
+            accent: { cyan: '#06b6d4', violet: '#8b5cf6', magenta: '#ec4899', indigo: '#6366f1', teal: '#14b8a6' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-surface-dark text-slate-200 font-body">
+
+  <!-- Loading overlay -->
+  <div id="loader" class="loader">
+    <div class="loader-ring"></div>
+  </div>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="index.html#hero" class="font-heading font-bold text-lg tracking-tight text-white hover:text-accent-cyan transition-colors">
+          S<span class="text-accent-cyan">.</span>G<span class="text-accent-violet">.</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-1">
+          <a href="index.html#about"        class="nav-link" data-i18n="nav.about">About</a>
+          <a href="publications.html"       class="nav-link active" data-i18n="nav.publications">Publications</a>
+          <a href="index.html#music"        class="nav-link" data-i18n="nav.music">Music</a>
+          <a href="index.html#github"       class="nav-link" data-i18n="nav.code">Code</a>
+          <a href="index.html#cv"           class="nav-link" data-i18n="nav.cv">CV</a>
+          <a href="index.html#contact"      class="nav-link" data-i18n="nav.contact">Contact</a>
+        </div>
+
+        <!-- Language Flags + Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-1.5">
+            <button class="lang-btn" data-lang="en" title="English" aria-label="Switch to English">
+              <span class="flag-icon">🇬🇧</span>
+            </button>
+            <button class="lang-btn" data-lang="it" title="Italiano" aria-label="Cambia in Italiano">
+              <span class="flag-icon">🇮🇹</span>
+            </button>
+          </div>
+          <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <a href="index.html#about"        class="mobile-nav-link" data-i18n="nav.about">About</a>
+      <a href="publications.html"       class="mobile-nav-link" data-i18n="nav.publications">Publications</a>
+      <a href="index.html#music"        class="mobile-nav-link" data-i18n="nav.music">Music</a>
+      <a href="index.html#github"       class="mobile-nav-link" data-i18n="nav.code">Code</a>
+      <a href="index.html#cv"           class="mobile-nav-link" data-i18n="nav.cv">CV</a>
+      <a href="index.html#contact"      class="mobile-nav-link" data-i18n="nav.contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ PAGE HEADER ═══════════════════════════ -->
+  <div class="pt-32 pb-4 px-4 text-center animate-fade-in-up">
+    <h1 class="font-heading font-bold text-4xl sm:text-5xl bg-gradient-to-r from-accent-cyan via-accent-violet to-accent-magenta bg-clip-text text-transparent mb-3" data-i18n="publications.title">
+      Publications
+    </h1>
+    <div class="section-line mx-auto"></div>
+  </div>
+
+  <!-- ═══════════════════════════════ PUBLICATIONS ═══════════════════════════ -->
+  <section id="publications" class="py-12 px-4 relative">
+    <div class="max-w-5xl mx-auto relative z-10">
+
+      <!-- Filters -->
+      <div class="flex flex-wrap justify-center gap-2 mb-10 animate-on-scroll">
+        <button class="pub-filter-btn active" data-filter="all"        data-i18n="publications.filter_all">All</button>
+        <button class="pub-filter-btn"        data-filter="journal"    data-i18n="publications.filter_journal">Journal</button>
+        <button class="pub-filter-btn"        data-filter="conference" data-i18n="publications.filter_conference">Conference</button>
+        <button class="pub-filter-btn"        data-filter="dataset"    data-i18n="publications.filter_dataset">Dataset</button>
+        <button class="pub-filter-btn"        data-filter="poster"     data-i18n="publications.filter_poster">Poster</button>
+        <button class="pub-filter-btn"        data-filter="preprint"   data-i18n="publications.filter_preprint">Preprint</button>
+      </div>
+
+      <!-- Publications Grid (full mode — no data-preview) -->
+      <div id="publications-grid" class="publications-grid animate-on-scroll">
+        <!-- Auto-populated by bibtex-parser.js in full year-grouped mode -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="py-12 px-4 border-t border-slate-800 mt-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-slate-500 text-sm" data-i18n="footer.copyright">© 2026 Stefano Giacomelli. All rights reserved.</p>
+      <p class="text-slate-600 text-xs mt-1" data-i18n="footer.built_with">Built with ♥ and vanilla JS</p>
+    </div>
+  </footer>
+
+  <!-- Language switcher boot (minimal, same pattern as main.js) -->
+  <script type="module" src="js/publications-main.js"></script>
+
+</body>
+</html>
