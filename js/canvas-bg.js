@@ -61,20 +61,26 @@ export class CanvasBackground {
     const W = this.canvas.width;
     const H = this.canvas.height;
 
+    // Responsive scaling
+    const scale = Math.max(0.5, Math.min(1.2, W / 1200));
+    // Prevent extreme vertical stretching on portrait devices
+    const effectiveH = Math.min(H, W * 1.5);
+    const startY = (H - effectiveH) / 2;
+
     this.layerDefs.forEach((def, li) => {
       const baseX = W * def.xRatio;
-      const step  = H / (def.count + 1);
+      const step  = effectiveH / (def.count + 1);
       for (let i = 0; i < def.count; i++) {
-        const baseY    = step * (i + 1);
+        const baseY    = startY + step * (i + 1);
         const isKernel = (li === 1 || li === 2 || li === 3) && (i % 3 === 0);
         const isActive = Math.random() > 0.38;
         this.neurons.push({
-          x: baseX + (Math.random() - 0.5) * 18,
-          y: baseY + (Math.random() - 0.5) * 30,
+          x: baseX + (Math.random() - 0.5) * 18 * scale,
+          y: baseY + (Math.random() - 0.5) * 30 * scale,
           baseX, baseY,
-          vx: (Math.random() - 0.5) * 1.4,
-          vy: (Math.random() - 0.5) * 1.4,
-          size:       Math.random() * 2.0 + 2.8,
+          vx: (Math.random() - 0.5) * 1.4 * scale,
+          vy: (Math.random() - 0.5) * 1.4 * scale,
+          size:       (Math.random() * 2.0 + 2.8) * scale,
           layerIndex: li,
           color:      def.color,
           isKernel, isActive,
@@ -97,16 +103,18 @@ export class CanvasBackground {
 
   buildSignals() {
     this.signals = [];
+    const W = this.canvas.width;
+    const scale = Math.max(0.5, Math.min(1.2, W / 1200));
     const cols = [[6,182,212],[99,102,241],[139,92,246],[236,72,153],[20,184,166]];
-    const count = window.innerWidth < 768 ? 45 : 70;
+    const count = window.innerWidth < 768 ? 40 : 70;
     for (let i = 0; i < count; i++) {
       const a = Math.random() * Math.PI * 2;
-      const s = Math.random() * 1.4 + 0.6;
+      const s = (Math.random() * 1.4 + 0.6) * scale;
       this.signals.push({
-        x: Math.random() * this.canvas.width,
+        x: Math.random() * W,
         y: Math.random() * this.canvas.height,
         vx: Math.cos(a) * s, vy: Math.sin(a) * s,
-        size:       Math.random() * 1.6 + 0.6,
+        size:       (Math.random() * 1.6 + 0.6) * scale,
         color:      cols[Math.floor(Math.random() * cols.length)],
         opacity:    Math.random() * 0.35 + 0.55,
         pulseSpeed: Math.random() * 0.03 + 0.01,
@@ -266,8 +274,10 @@ export class CanvasBackground {
 
   // ─── draw: animated audio waveform strip (left) ─────────────────────────────
   drawAudioInput(time) {
-    const ctx = this.ctx, H = this.canvas.height;
-    const stripW = 52, midX = 8 + stripW / 2;
+    const ctx = this.ctx, H = this.canvas.height, W = this.canvas.width;
+    const scale = Math.max(0.5, Math.min(1.2, W / 1200));
+    
+    const stripW = 52 * scale, midX = 8 + stripW / 2;
     const maxAmp = stripW * 0.38;
     const y0 = 0, y1 = H, yH = y1 - y0;
     const scroll = time * 1.1;

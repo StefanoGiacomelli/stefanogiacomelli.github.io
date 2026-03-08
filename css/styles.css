@@ -692,7 +692,7 @@ html {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
@@ -926,7 +926,7 @@ html {
 
 .github-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1rem;
 }
 
@@ -936,6 +936,9 @@ html {
   text-decoration: none;
   color: inherit;
   position: relative;
+  min-width: 0;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .repo-card.pinned {

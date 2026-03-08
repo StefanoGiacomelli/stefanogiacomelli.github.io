@@ -101,18 +101,17 @@
   },
   "cv": {
     "title": "Curriculum Vitae",
-    "download": "Download PDF",
+    "download": "View PDF",
     "timeline_title": "Timeline"
   },
   "contact": {
     "title": "Get in Touch",
     "email_institutional_label": "Institutional",
     "email_personal_label": "Personal",
-    "location": "Rieti, Lazio, Italy",
+    "location": "L'Aquila, Abruzzo, Italy",
     "connect": "Let's connect"
   },
   "footer": {
-    "copyright": "© 2026 Stefano Giacomelli. All rights reserved.",
-    "built_with": "Built with ♥ and vanilla JS"
+    "copyright": "© 2026 Stefano Giacomelli. All rights reserved."
   }
 }
