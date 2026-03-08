@@ -1,0 +1,102 @@
+[
+  {
+    "id": "e2panns",
+    "title": "E2PANNs",
+    "description": {
+      "en": "From large-scale audio tagging to real-time explainable emergency vehicle siren detection. Efficient CNN architectures optimized for embedded hardware deployment.",
+      "it": "Dal tagging audio su larga scala al rilevamento in tempo reale di sirene di veicoli d'emergenza. Architetture CNN efficienti ottimizzate per il deployment su hardware embedded."
+    },
+    "tags": ["PyTorch", "CNN", "Audio Tagging", "Edge AI", "XAI"],
+    "github": "https://github.com/StefanoGiacomelli/e2panns",
+    "paper_doi": "10.48550/ARXIV.2506.23437",
+    "image_placeholder": "spectrogram",
+    "featured": true
+  },
+  {
+    "id": "audioset-tools",
+    "title": "AudioSet-Tools",
+    "description": {
+      "en": "A Python framework for taxonomy-aware AudioSet curation and reproducible audio research. Tools for downloading, filtering, and managing large-scale audio datasets.",
+      "it": "Un framework Python per la cura tassonomica di AudioSet e la ricerca audio riproducibile. Strumenti per scaricare, filtrare e gestire dataset audio su larga scala."
+    },
+    "tags": ["Python", "AudioSet", "Dataset", "DSP"],
+    "github": "https://github.com/StefanoGiacomelli/audioset-tools",
+    "paper_doi": "10.21203/rs.3.rs-6957428/v1",
+    "image_placeholder": "dataset",
+    "featured": true
+  },
+  {
+    "id": "torch_amt",
+    "title": "torch_amt",
+    "description": {
+      "en": "Differentiable, GPU-accelerated PyTorch implementations of computational auditory models from the MATLAB Auditory Modeling Toolbox (AMT).",
+      "it": "Implementazioni PyTorch differenziabili e accelerate su GPU di modelli uditivi computazionali dal MATLAB Auditory Modeling Toolbox (AMT)."
+    },
+    "tags": ["PyTorch", "Psychoacoustics", "Auditory Models", "GPU"],
+    "github": "https://github.com/StefanoGiacomelli/torch_amt",
+    "docs": "https://torch-amt.readthedocs.io",
+    "image_placeholder": "auditory",
+    "featured": true
+  },
+  {
+    "id": "torch-audio-embeddings",
+    "title": "Torch Audio Embeddings",
+    "description": {
+      "en": "A standard framework for audio neural network embedding models. Unified interface for VGGish, YAMNet, and other audio embeddings in PyTorch.",
+      "it": "Un framework standard per modelli di embedding basati su reti neurali audio. Interfaccia unificata per VGGish, YAMNet e altri embedding audio in PyTorch."
+    },
+    "tags": ["PyTorch", "Embeddings", "VGGish", "YAMNet"],
+    "github": "https://github.com/StefanoGiacomelli/torch-audio-embeddings",
+    "image_placeholder": "embedding",
+    "featured": true
+  },
+  {
+    "id": "ocon-model",
+    "title": "OCON Model",
+    "description": {
+      "en": "One-Class-in-One-Network: a distributable supervised classification architecture for acoustic monitoring in smart cities.",
+      "it": "One-Class-in-One-Network: un'architettura di classificazione supervisionata distribuibile per il monitoraggio acustico nelle smart city."
+    },
+    "tags": ["Deep Learning", "Classification", "Smart Cities", "IoT"],
+    "github": "https://github.com/StefanoGiacomelli/Vowel_phonemes_Analysis_and_Classification_by_means_of_OCON_rectifiers_Deep_Learning_Architectures",
+    "paper_doi": "10.1109/ISCC61673.2024.10733621",
+    "image_placeholder": "network",
+    "featured": false
+  },
+  {
+    "id": "strumkanet",
+    "title": "StrumKANet",
+    "description": {
+      "en": "A Kolmogorov-Arnold Network NAS framework for strumming pattern recognition in technology-enhanced pop/rock music education.",
+      "it": "Un framework NAS basato su Reti di Kolmogorov-Arnold per il riconoscimento di pattern di strumming nell'educazione musicale pop/rock assistita dalla tecnologia."
+    },
+    "tags": ["KAN", "NAS", "MIR", "Music Education"],
+    "github": "https://github.com/StefanoGiacomelli/StrumKANet",
+    "image_placeholder": "music-tech",
+    "featured": false
+  },
+  {
+    "id": "pra-rir-conv",
+    "title": "PRA RIR Conv",
+    "description": {
+      "en": "PyRoomAcoustics extension for time-varying convolution and RIR trajectory synthesis. Tools for generating realistic spatial audio datasets.",
+      "it": "Estensione PyRoomAcoustics per convoluzione tempo-variante e sintesi di traiettorie RIR. Strumenti per generare dataset audio spaziali realistici."
+    },
+    "tags": ["Python", "Room Acoustics", "RIR", "Spatial Audio"],
+    "github": "https://github.com/StefanoGiacomelli/PRA_RIR_Conv",
+    "paper_doi": "10.5281/zenodo.14193309",
+    "image_placeholder": "spatial",
+    "featured": false
+  },
+  {
+    "id": "musical-metaverse",
+    "title": "Musical Metaverse",
+    "description": {
+      "en": "The Musical Metaverse Research Project: a comprehensive MusicTech survey exploring immersive audio experiences and 3D audio workflows.",
+      "it": "Il Progetto di Ricerca Musical Metaverse: un sondaggio MusicTech completo che esplora esperienze audio immersive e workflow audio 3D."
+    },
+    "tags": ["Metaverse", "3D Audio", "MusicTech", "Survey"],
+    "image_placeholder": "metaverse",
+    "featured": false
+  }
+]

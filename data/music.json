@@ -1,0 +1,26 @@
+[
+  {
+    "title": {
+      "en": "Your Piece Title Here",
+      "it": "Titolo del Brano"
+    },
+    "year": 2024,
+    "description": {
+      "en": "Description of the piece, context, instruments, techniques used.",
+      "it": "Descrizione del brano, contesto, strumenti, tecniche utilizzate."
+    },
+    "youtube_id": "REPLACE_WITH_YOUTUBE_VIDEO_ID",
+    "attachments": [
+      {
+        "type": "maxmsp",
+        "label": { "en": "MaxMSP Patch", "it": "Patch MaxMSP" },
+        "url": "assets/music/patch_name.maxpat"
+      },
+      {
+        "type": "pdf",
+        "label": { "en": "Program Notes", "it": "Note di Programma" },
+        "url": "assets/music/notes.pdf"
+      }
+    ]
+  }
+]

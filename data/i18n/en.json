@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "about": "About",
+    "publications": "Publications",
+    "music": "Music",
+    "code": "Code",
+    "cv": "CV",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Stefano Giacomelli",
+    "roles": [
+      "Ph.D. Researcher",
+      "Audio ML/DL Engineer",
+      "Electroacoustic Music Performer",
+      "Sound Engineer"
+    ],
+    "cta": "Explore my work"
+  },
+  "about": {
+    "title": "About Me",
+    "bio": "I am a PhD Researcher at the University of L'Aquila (Italy), working at the intersection of Audio Signal Processing, Deep Learning, and the Internet of Sounds. My research focuses on efficient neural network architectures for real-time computational auditory scene analysis and sound event detection.",
+    "bio2": "Beyond research, I am an electroacoustic music composer, performer and sound engineer with a background in music technology from the A. Casella Conservatory. I combine my technical expertise with artistic practice to explore the creative potential of computational audio.",
+    "interests_title": "Research Interests",
+    "interests": [
+      "Deep Learning",
+      "Audio Neural Networks",
+      "Computational Auditory Scene Analysis",
+      "Sound Event Detection",
+      "Internet of Sounds",
+      "Music Information Retrieval",
+      "Acoustics",
+      "Psychoacoustics",
+      "Spatial Audio",
+      "Digital Signal Processing"
+    ],
+    "affiliations_title": "Affiliations",
+    "affiliations": [
+      {
+        "name": "University of L'Aquila",
+        "role": "Ph.D. Candidate",
+        "department": "Dpt. of Information Engineering, Computer Science and Mathematics (DISIM)",
+        "logo": "assets/img/univaq-logo.png",
+        "dept_logo": "assets/img/disim-logo.png"
+      },
+      {
+        "name": "A. Casella Conservatory",
+        "role": "Master of Arts in Sound Technology",
+        "department": "Dpt. of Music & New Technologies (MuEL)",
+        "logo": "assets/img/consaq-logo.svg",
+        "dept_logo": "assets/img/muel-logo.svg"
+      },
+      {
+        "name": "A. Casella Conservatory",
+        "role": "Bachelor of Arts in Electroacoustic Music Composition",
+        "department": "Dpt. of Music & New Technologies (MuEL)",
+        "logo": "assets/img/consaq-logo.svg",
+        "dept_logo": "assets/img/muel-logo.svg"
+      }
+    ]
+  },
+  "publications": {
+    "title": "Publications",
+    "subtitle": "Auto-generated from BibTeX — newest first",
+    "filter_all": "All",
+    "filter_conference": "Conference",
+    "filter_journal": "Journal",
+    "filter_preprint": "Preprint",
+    "filter_dataset": "Dataset",
+    "filter_poster": "Poster",
+    "types": {
+      "inproceedings": "Conference",
+      "article": "Journal",
+      "misc": "Preprint / Dataset"
+    }
+  },
+  "projects": {
+    "title": "Research Projects",
+    "subtitle": "Key contributions and tools",
+    "view_code": "View Code",
+    "read_paper": "Read Paper",
+    "view_docs": "Documentation"
+  },
+  "music": {
+    "title": "Music",
+    "subtitle": "Electroacoustic compositions and performances",
+    "watch": "Watch",
+    "download_patch": "MaxMSP Patch",
+    "download_pdf": "Program Notes",
+    "placeholder": "Click to load video"
+  },
+  "github": {
+    "title": "GitHub Codebase",
+    "subtitle": "Public repositories on GitHub",
+    "stars": "stars",
+    "forks": "forks",
+    "updated": "Updated",
+    "view_all": "View all on GitHub",
+    "pinned": "Pinned"
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "download": "Download PDF",
+    "timeline_title": "Timeline"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "email_label": "Email",
+    "location": "Rieti, Lazio, Italy",
+    "connect": "Let's connect"
+  },
+  "footer": {
+    "copyright": "© 2025 Stefano Giacomelli. All rights reserved.",
+    "built_with": "Built with ♥ and vanilla JS"
+  }
+}
