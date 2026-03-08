@@ -4,6 +4,8 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"   # ogni notte a mezzanotte UTC
 
 permissions:
   contents: read
@@ -21,8 +23,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout website repo
         uses: actions/checkout@v4
+
+      - name: Fetch files from Academic_CV
+        env:
+          CV_TOKEN: ${{ secrets.CV_REPO_TOKEN }}
+        run: |
+          git clone --depth=1 https://StefanoGiacomelli:${CV_TOKEN}@github.com/StefanoGiacomelli/Academic_CV.git /tmp/Academic_CV
+          cp /tmp/Academic_CV/publications.bib data/publications.bib
+          cp /tmp/Academic_CV/Academic_CV.pdf assets/Academic_CV.pdf
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
