@@ -41,13 +41,31 @@ class PublicationsApp {
   }
 
   setupSmoothScroll() {
+    const scrollToTarget = (target, behavior = 'smooth') => {
+      const headerOffset = 80;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: behavior
+      });
+    };
+
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
         const target = document.getElementById(link.getAttribute('href').slice(1));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (target) scrollToTarget(target);
       });
     });
+    
+    // Handle URL hash on page load for consistency
+    if (window.location.hash) {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (target) {
+        setTimeout(() => scrollToTarget(target, 'auto'), 300);
+      }
+    }
   }
 
   setupMobileMenu() {

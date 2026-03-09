@@ -152,6 +152,16 @@ class App {
   }
 
   setupSmoothScroll() {
+    const scrollToTarget = (target, behavior = 'smooth') => {
+      const headerOffset = 80;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: behavior
+      });
+    };
+
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -162,10 +172,21 @@ class App {
           document.getElementById('mobile-menu')?.classList.remove('open');
           document.getElementById('menu-toggle')?.classList.remove('open');
 
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          scrollToTarget(target);
         }
       });
     });
+
+    // Handle URL hash on page load (from external links)
+    if (window.location.hash) {
+      const id = window.location.hash.slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        // Adjust scroll position after dynamic content has rendered
+        setTimeout(() => scrollToTarget(target, 'auto'), 300);
+        setTimeout(() => scrollToTarget(target, 'smooth'), 1000); // Failsafe for slow connections loading images
+      }
+    }
   }
 
   setupMobileMenu() {

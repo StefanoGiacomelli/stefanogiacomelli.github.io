@@ -19,13 +19,10 @@ export class GitHubRepos {
     try {
       const res = await fetch(`https://api.github.com/users/${this.username}/repos?sort=updated&per_page=30`);
       const data = await res.json();
-      // Filter out forks, sort pinned first
+      // Filter strictly for pinned repositories
       this.repos = data
-        .filter(r => !r.fork)
+        .filter(r => !r.fork && this.pinnedRepos.includes(r.name))
         .sort((a, b) => {
-          const aPin = this.pinnedRepos.includes(a.name) ? 0 : 1;
-          const bPin = this.pinnedRepos.includes(b.name) ? 0 : 1;
-          if (aPin !== bPin) return aPin - bPin;
           return new Date(b.updated_at) - new Date(a.updated_at);
         });
     } catch (e) {
