@@ -17,14 +17,45 @@ export class GitHubRepos {
 
   async fetchRepos() {
     try {
-      const res = await fetch(`https://api.github.com/users/${this.username}/repos?sort=updated&per_page=30`);
-      const data = await res.json();
-      // Filter strictly for pinned repositories
-      this.repos = data
+      // 1) Try standard GitHub API
+      let githubData = [];
+      try {
+        const res = await fetch(`https://api.github.com/users/${this.username}/repos?sort=updated&per_page=100`);
+        const apiData = await res.json();
+        if (Array.isArray(apiData)) githubData = apiData;
+      } catch (e) {
+        console.warn('API Fetch failed:', e);
+      }
+      
+      this.repos = githubData
         .filter(r => !r.fork && this.pinnedRepos.includes(r.name))
-        .sort((a, b) => {
-          return new Date(b.updated_at) - new Date(a.updated_at);
-        });
+        .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+
+      // 2) Fallback: Fetch raw HTML using a CORS proxy if API is rate-limited or empty
+      if (this.repos.length === 0) {
+        console.warn('GitHub API returned no pinned repos (rate limit). Attempting CORS proxy scraping fallback...');
+        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://github.com/${this.username}`)}`;
+        const htmlRes = await fetch(proxyUrl);
+        
+        if (htmlRes.ok) {
+          const jsonVal = await htmlRes.json();
+          const html = jsonVal.contents;
+          const matches = html.match(/<span class="repo"[^>]*>([^<]+)<\/span>/g);
+          
+          if (matches) {
+             this.repos = matches.map(m => {
+               const titleMatch = m.match(/>([^<]+)<\/span>/);
+               const name = titleMatch ? titleMatch[1].trim() : '';
+               return {
+                 name: name,
+                 html_url: `https://github.com/${this.username}/${name}`,
+                 description: 'Check out this repository on GitHub',
+                 updated_at: new Date().toISOString()
+               };
+             }).filter(r => this.pinnedRepos.includes(r.name));
+          }
+        }
+      }
     } catch (e) {
       console.error('Failed to fetch GitHub repos:', e);
       this.repos = [];
