@@ -51,10 +51,19 @@ class PublicationsApp {
       });
     };
 
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
+    document.querySelectorAll('a[href^="#"], a[href^="index.html#"]').forEach(link => {
       link.addEventListener('click', e => {
+        const href = link.getAttribute('href');
+        const isIndex = href.startsWith('index.html');
+        const id = isIndex ? href.split('#')[1] : href.slice(1);
+
+        // If it's an index.html link and we're on publications, let the browser handle it
+        if (isIndex && !window.location.pathname.endsWith('index.html') && window.location.pathname !== '/') {
+          return; // Let default browser navigation to index.html happen
+        }
+
         e.preventDefault();
-        const target = document.getElementById(link.getAttribute('href').slice(1));
+        const target = document.getElementById(id);
         if (target) scrollToTarget(target);
       });
     });

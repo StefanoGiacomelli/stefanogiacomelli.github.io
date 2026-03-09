@@ -162,17 +162,27 @@ class App {
       });
     };
 
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
+    document.querySelectorAll('a[href^="#"], a[href^="index.html#"]').forEach(link => {
       link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const id = link.getAttribute('href').slice(1);
-        const target = document.getElementById(id);
-        if (target) {
-          // Close mobile menu if open
-          document.getElementById('mobile-menu')?.classList.remove('open');
-          document.getElementById('menu-toggle')?.classList.remove('open');
+        const href = link.getAttribute('href');
+        const isIndex = href.startsWith('index.html');
+        const id = isIndex ? href.split('#')[1] : href.slice(1);
+        
+        // Only prevent default and scroll if we are already on the index page
+        if (!isIndex || window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+          e.preventDefault();
+          const target = document.getElementById(id);
+          if (target) {
+            // Close mobile menu if open
+            document.getElementById('mobile-menu')?.classList.remove('open');
+            document.getElementById('menu-toggle')?.classList.remove('open');
 
-          scrollToTarget(target);
+            scrollToTarget(target);
+          } else if (isIndex) {
+            // If the target doesn't exist on this page and the link was explicitly to index.html#,
+            // let the browser handle the navigation normally
+            window.location.href = href;
+          }
         }
       });
     });
