@@ -12,27 +12,28 @@
     "roles": [
       "Dottorando di Ricerca",
       "Sviluppatore Audio ML/DL",
-      "Musicista Elettroacustico",
+      "Compositore di Musica Elettronica",
       "Ingegnere del Suono"
     ],
     "cta": "Esplora il mio lavoro"
   },
   "about": {
-    "title": "Chi Sono",
+    "title": "Biografia",
     "bio": "Stefano Giacomelli (Graduate Student Member, IEEE) è nato a Rieti nel 1992. Ha conseguito il Diploma in Chitarra Elettrica presso il Saint Louis College of Music di Roma nel 2018, la Laurea Triennale (cum laude) in Composizione di Musica Elettroacustica nel 2020 e la Laurea Magistrale (cum laude con menzione di merito) in Direzione del Suono e Tecnologie nel 2023, entrambe presso il Conservatorio di Musica \"A. Casella\" di L'Aquila. Dal 2023 è iscritto al Dottorato di Ricerca in Tecnologie dell'Informazione e della Comunicazione presso il Dipartimento di Ingegneria e Scienze dell'Informazione e Matematica (DISIM) dell'Università degli Studi dell'Aquila. I suoi interessi di ricerca comprendono l'Elaborazione Digitale del Segnale (DSP), il Music Information Retrieval (MIR) e la Computational Auditory Scene Analysis (CASA), con focus sul signal embedding basato su deep learning e sull'ottimizzazione di reti neurali, ambiti per i quali ha co-firmato diversi contributi scientifici.",
-    "bio2": "Collabora attivamente a progetti di ricerca nazionali ed europei interdisciplinari, che spaziano tra domini scientifici e artistici — tra cui le realtà estese musicali (PRIN - Musical Metaverse 2022) e le metodologie di ricerca artistica e musicologica (EAR - Enacting Artistic Research WP3). È inoltre compositore, regista del suono, esecutore e sviluppatore software per produzioni di musica contemporanea acustica ed elettroacustica. S. Giacomelli è destinatario di diversi riconoscimenti, tra cui premi nazionali e menzioni di merito al Premio Nazionale delle Arti (MUR).",
+    "bio2": "Collabora attivamente a progetti di ricerca nazionali ed europei interdisciplinari, che spaziano tra domini scientifici e artistici — tra cui realtà estese musicali (PRIN - Musical Metaverse 2022) e metodologie di ricerca artistica e musicologica (EAR - Enacting Artistic Research WP3). È inoltre compositore, regista del suono, esecutore e sviluppatore software per produzioni di musica contemporanea acustica ed elettroacustica. S. Giacomelli è stato premiato con diversi riconoscimenti, tra cui primi posti e menzioni di merito al Premio Nazionale delle Arti (MUR).",
     "interests_title": "Interessi di Ricerca",
     "interests": [
       "Deep Learning",
-      "Reti Neurali per l'Audio",
+      "Audio Neural Networks",
       "Computational Auditory Scene Analysis",
-      "Classificazione di Scenari Acustici",
+      "Acoustic Scene Classification",
       "Sound Event Detection",
       "Internet of Sounds",
       "Music Information Retrieval",
-      "Psicoacustica",
-      "Audio Spaziale",
-      "Elaborazione Digitale del Segnale"
+      "Acoustics",
+      "Psychoacoustics",
+      "Spatial Audio",
+      "Digital Signal Processing"
     ],
     "affiliations_title": "Affiliazioni",
     "affiliations": [
@@ -45,14 +46,14 @@
       },
       {
         "name": "Conservatorio A. Casella",
-        "role": "Laurea Magistrale in Tecnologie del Suono",
+        "role": "Diploma Accademico di II livello in Tecnologie del Suono",
         "department": "Musica e Nuove Tecnologie (MuEL)",
         "logo": "assets/img/consaq-logo.svg",
         "dept_logo": "assets/img/muel-logo.svg"
       },
       {
         "name": "Conservatorio A. Casella",
-        "role": "Diploma Accademico in Musica Elettroacustica",
+        "role": "Diploma Accademico di I livello in Composizione di Musica Elettroacustica",
         "department": "Musica e Nuove Tecnologie (MuEL)",
         "logo": "assets/img/consaq-logo.svg",
         "dept_logo": "assets/img/muel-logo.svg"
@@ -78,7 +79,7 @@
     "title": "Progetti di Ricerca",
     "subtitle": "Contributi e strumenti principali",
     "view_code": "Codice",
-    "read_paper": "Leggi il Paper",
+    "read_paper": "Leggi l'Articolo",
     "view_docs": "Documentazione"
   },
   "music": {
@@ -100,7 +101,7 @@
   },
   "cv": {
     "title": "Curriculum Vitae",
-    "download": "Visualizza il CV",
+    "download": "Visualizza il PDF",
     "timeline_title": "Timeline"
   },
   "contact": {

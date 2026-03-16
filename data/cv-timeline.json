@@ -10,24 +10,40 @@
       "it": "Dipartimento di Ingegneria e Scienze dell'Informazione e Matematica (DISIM), Università dell'Aquila"
     },
     "description": {
-      "en": "Research on Audio Neural Networks, Sound Event Detection, and Edge AI for smart city acoustic monitoring.",
-      "it": "Ricerca su Reti Neurali Audio, Sound Event Detection e Edge AI per il monitoraggio acustico delle smart city."
+      "en": "Computational methods of Analysis & Synthesis of the Acoustic Scene supporting immersive and connected XR services.",
+      "it": "Metodi computazionali di Analisi e Sintesi della Scena Acustica a supporto di servizi XR immersivi e connessi."
     },
     "icon": "graduation-cap"
   },
   {
-    "year": "2020 — 2022",
+    "year": "2020 — 2023",
     "title": {
-      "en": "Master in Sound Technology",
-      "it": "Laurea Magistrale in Tecnologie del Suono"
+      "en": "Master of Arts in Sound Technology",
+      "it": "Biennio di II Livello in Regia e Tecnologie del Suono"
     },
     "institution": {
-      "en": "A. Casella Conservatory, L'Aquila",
-      "it": "Conservatorio A. Casella, L'Aquila"
+      "en": "Department of Electronic Music (MuEL), A. Casella Conservatory, L'Aquila",
+      "it": "Dipartimento di Musica Elettronica (MuEL), Conservatorio A. Casella, L'Aquila"
     },
     "description": {
       "en": "Thesis on OCON deep learning architectures for vowel phoneme classification.",
       "it": "Tesi su architetture deep learning OCON per la classificazione di fonemi vocalici."
+    },
+    "icon": "music"
+  },
+  {
+    "year": "2016 — 2020",
+    "title": {
+      "en": "Bachelor of Arts in Electroacoustic Music Composition",
+      "it": "Triennio di I Livello in Composizione di Musica Elettroacustica"
+    },
+    "institution": {
+      "en": "Department of Electronic Music (MuEL), A. Casella Conservatory, L'Aquila",
+      "it": "Dipartimento di Musica Elettronica (MuEL), Conservatorio A. Casella, L'Aquila"
+    },
+    "description": {
+      "en": "...dans L'Espace: for live electronics, electroacoustic feedback and octophonic system.",
+      "it": "...dans L'Espace: per elettronica dal vivo, feedback elettroacustico e sistema ottofonico."
     },
     "icon": "music"
   }
