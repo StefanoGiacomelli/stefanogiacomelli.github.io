@@ -42,21 +42,27 @@
         "role": "Ph.D. Candidate",
         "department": "Dpt. of Information Engineering, Computer Science and Mathematics (DISIM)",
         "logo": "assets/img/univaq-logo.png",
-        "dept_logo": "assets/img/disim-logo.png"
+        "logo_link": "https://www.univaq.it/index.php?&lang_s=en",
+        "dept_logo": "assets/img/disim-logo.png",
+        "dept_logo_link": "https://www.disim.univaq.it/"
       },
       {
         "name": "A. Casella Conservatory",
         "role": "Master of Arts in Sound Technology",
         "department": "Dpt. of Music & New Technologies (MuEL)",
         "logo": "assets/img/consaq-logo.svg",
-        "dept_logo": "assets/img/muel-logo.svg"
+        "logo_link": "https://www.consaq.it/",
+        "dept_logo": "assets/img/muel-logo.svg",
+        "dept_logo_link": "https://musel.consaq.it/"
       },
       {
         "name": "A. Casella Conservatory",
         "role": "Bachelor of Arts in Electroacoustic Music Composition",
         "department": "Dpt. of Music & New Technologies (MuEL)",
         "logo": "assets/img/consaq-logo.svg",
-        "dept_logo": "assets/img/muel-logo.svg"
+        "logo_link": "https://www.consaq.it/",
+        "dept_logo": "assets/img/muel-logo.svg",
+        "dept_logo_link": "https://musel.consaq.it/"
       }
     ]
   },

@@ -35,12 +35,13 @@ jobs:
           git clone --depth=1 https://StefanoGiacomelli:${CV_TOKEN}@github.com/StefanoGiacomelli/Academic_CV.git /tmp/Academic_CV
           cp /tmp/Academic_CV/publications.bib data/publications.bib
           cp /tmp/Academic_CV/Academic_CV.pdf data/Academic_CV.pdf
+          cp /tmp/Academic_CV/artworks.tex data/artworks.tex
 
       - name: Commit updated CV files
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
-          git add data/publications.bib data/Academic_CV.pdf
+          git add data/publications.bib data/Academic_CV.pdf data/artworks.tex
           git diff --staged --quiet || (git commit -m "chore: update CV files from Academic_CV [skip ci]" && git push)
 
       - name: Setup Pages

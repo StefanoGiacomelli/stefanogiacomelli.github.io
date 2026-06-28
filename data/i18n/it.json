@@ -42,21 +42,27 @@
         "role": "Dottorando di Ricerca",
         "department": "Dip. di Ingegneria e Scienze dell'Informazione e Matematica (DISIM)",
         "logo": "assets/img/univaq-logo.png",
-        "dept_logo": "assets/img/disim-logo.png"
+        "logo_link": "https://www.univaq.it/",
+        "dept_logo": "assets/img/disim-logo.png",
+        "dept_logo_link": "https://www.disim.univaq.it/"
       },
       {
         "name": "Conservatorio A. Casella",
         "role": "Diploma Accademico di II livello in Tecnologie del Suono",
         "department": "Musica e Nuove Tecnologie (MuEL)",
         "logo": "assets/img/consaq-logo.svg",
-        "dept_logo": "assets/img/muel-logo.svg"
+        "logo_link": "https://www.consaq.it/",
+        "dept_logo": "assets/img/muel-logo.svg",
+        "dept_logo_link": "https://musel.consaq.it/"
       },
       {
         "name": "Conservatorio A. Casella",
         "role": "Diploma Accademico di I livello in Composizione di Musica Elettroacustica",
         "department": "Musica e Nuove Tecnologie (MuEL)",
         "logo": "assets/img/consaq-logo.svg",
-        "dept_logo": "assets/img/muel-logo.svg"
+        "logo_link": "https://www.consaq.it/",
+        "dept_logo": "assets/img/muel-logo.svg",
+        "dept_logo_link": "https://musel.consaq.it/"
       }
     ]
   },

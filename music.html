@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music — Stefano Giacomelli</title>
+  <meta name="description" content="Electroacoustic compositions and performances by Stefano Giacomelli." />
+  <meta name="author" content="Stefano Giacomelli" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            surface: { DEFAULT: '#1a1a2e', dark: '#0a0a0f', light: '#2a2a4a' },
+            accent: { cyan: '#06b6d4', violet: '#8b5cf6', magenta: '#ec4899', indigo: '#6366f1', teal: '#14b8a6' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-surface-dark text-slate-200 font-body">
+
+  <!-- Loading overlay -->
+  <div id="loader" class="loader">
+    <div class="loader-ring"></div>
+  </div>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="index.html#hero" class="font-heading font-bold text-lg tracking-tight text-white hover:text-accent-cyan transition-colors">
+          S<span class="text-accent-cyan">.</span>G<span class="text-accent-violet">.</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-1">
+          <a href="index.html#about"        class="nav-link" data-i18n="nav.about">About</a>
+          <a href="publications.html"       class="nav-link" data-i18n="nav.publications">Publications</a>
+          <a href="music.html"              class="nav-link active" data-i18n="nav.music">Music</a>
+          <a href="index.html#github"       class="nav-link" data-i18n="nav.code">Code</a>
+          <a href="index.html#cv"           class="nav-link" data-i18n="nav.cv">CV</a>
+          <a href="index.html#contact"      class="nav-link" data-i18n="nav.contact">Contact</a>
+        </div>
+
+        <!-- Language Flags + Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-1.5">
+            <button class="lang-btn" data-lang="en" title="English" aria-label="Switch to English">
+              <span class="flag-icon">🇬🇧</span>
+            </button>
+            <button class="lang-btn" data-lang="it" title="Italiano" aria-label="Cambia in Italiano">
+              <span class="flag-icon">🇮🇹</span>
+            </button>
+          </div>
+          <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <a href="index.html#about"        class="mobile-nav-link" data-i18n="nav.about">About</a>
+      <a href="publications.html"       class="mobile-nav-link" data-i18n="nav.publications">Publications</a>
+      <a href="music.html"              class="mobile-nav-link" data-i18n="nav.music">Music</a>
+      <a href="index.html#github"       class="mobile-nav-link" data-i18n="nav.code">Code</a>
+      <a href="index.html#cv"           class="mobile-nav-link" data-i18n="nav.cv">CV</a>
+      <a href="index.html#contact"      class="mobile-nav-link" data-i18n="nav.contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ PAGE HEADER ═══════════════════════════ -->
+  <div class="pt-32 pb-4 px-4 text-center animate-fade-in-up">
+    <h1 class="font-heading font-bold text-4xl sm:text-5xl bg-gradient-to-r from-accent-cyan via-accent-violet to-accent-magenta bg-clip-text text-transparent mb-3" data-i18n="music.title">
+      Music
+    </h1>
+    <p class="section-subtitle mb-6" data-i18n="music.subtitle">Electroacoustic compositions and performances</p>
+    <div class="section-line mx-auto"></div>
+  </div>
+
+  <!-- ═══════════════════════════════ CONCERTS ═══════════════════════════ -->
+  <section id="concerts" class="py-12 px-4 relative">
+    <div class="max-w-4xl mx-auto relative z-10">
+      <h2 class="font-heading font-semibold text-2xl text-white mb-8 border-b border-slate-700 pb-2">Artistic Productions & Concerts</h2>
+      <div id="concerts-list" class="space-y-6">
+        <!-- Auto-populated by tex-parser.js and music-main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTENTS (PLACEHOLDER) ═══════════════════════════ -->
+  <section id="contents" class="py-12 px-4 relative bg-surface/50">
+    <div class="absolute inset-0 bg-gradient-to-b from-surface-dark via-transparent to-surface-dark opacity-50"></div>
+    <div class="max-w-4xl mx-auto relative z-10">
+      <h2 class="font-heading font-semibold text-2xl text-white mb-8 border-b border-slate-700 pb-2">Contents</h2>
+      
+      <div class="glass-card p-12 text-center text-slate-400 border border-slate-700/50 border-dashed rounded-xl">
+        <svg class="mx-auto h-12 w-12 text-slate-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <p class="text-lg">Media and additional contents will be available soon.</p>
+        <p class="text-sm mt-2 text-slate-500">Audio, videos, and embedded players are under construction.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="py-12 px-4 border-t border-slate-800 mt-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-slate-500 text-sm" data-i18n="footer.copyright">© 2026 Stefano Giacomelli. All rights reserved.</p>
+      <p class="text-slate-600 text-xs mt-1" data-i18n="footer.built_with">Built with ♥ and vanilla JS</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/music-main.js"></script>
+
+</body>
+</html>
